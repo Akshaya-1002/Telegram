@@ -67,9 +67,11 @@ const Sidebar = () => {
         <IconButton>
           <PhoneOutlinedIcon />
         </IconButton>
+
         <IconButton>
           <QuestionAnswerOutlinedIcon />
         </IconButton>
+        
         <IconButton>
           <SettingsIcon />
         </IconButton>

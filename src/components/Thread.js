@@ -28,6 +28,7 @@ import { selectUser } from "../features/userSlice";
 import Message from "./Message";
 import AttachFileOutlinedIcon from "@mui/icons-material/AttachFileOutlined";
 import EmojiEmotionsOutlinedIcon from "@mui/icons-material/EmojiEmotionsOutlined";
+// import EmojiPicker from "emoji-picker-react";
 
 const Thread = () => {
   const [input, setInput] = useState("");
@@ -81,7 +82,9 @@ const Thread = () => {
         <div className="thread_header_contents">
           {/* Avatar */}
 
-          <Avatar />
+          {/* <Avatar /> */}
+          <Avatar src={messages[0]?.data?.photo} />
+
           <div className="thread_header_contents_info">
             <h4>{threadName}</h4>
             <h5>Last Seen</h5>
@@ -121,7 +124,7 @@ const Thread = () => {
 
           <IconButton>
             <EmojiEmotionsOutlinedIcon />
-          </IconButton>
+          </IconButton>        
 
           <IconButton onClick={sendMessage} type="submit">
             <SendRounded />
